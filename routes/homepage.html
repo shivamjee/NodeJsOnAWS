@@ -1,0 +1,72 @@
+<!Doctype Html>  
+<Html>     
+<Head>      
+	<Title>HomePage</Title>  
+	<style>  
+		.searchbox {  
+		float: left;  
+		}  
+		input[type=text] {  
+		padding: 6px;  
+		margin-top: 8px;  
+		font-size: 17px;  
+		border: 1px solid #ccc; 
+		width: 70%; 
+		}
+		input[type=text1] {  
+		padding: 6px;  
+		margin-top: 8px;  
+		font-size: 17px;  
+		border: 1px solid #ccc; 
+		width: 30%; 
+		}    
+		.searchbox button {  
+		  
+		padding: 8px;  
+		margin-top: 10px;  
+		margin-left: 10px;  
+		background: orange;  
+		font-size: 15px;  
+		border: none;  
+		cursor: pointer;  
+		}  
+		.searchbox button:hover {  
+		background: blue;  
+		} 
+	</style>  
+</Head>  
+<Body>   
+	<div class="searchbox">  
+		<form action="/users" method="get" target="_blank">   
+			<input type="text" placeholder=" Search by name or Location" name="userName">  
+			<button type="submit">Submit</button> 
+		</form>
+		<br>
+		<hr>
+		<center><b><h2>Get All Names</h2></b></center>
+		<form action="/users" method="get" target="_blank">
+			<center><button type="submit">GetAllNames</button></center>    
+		</form>
+		<br><hr>
+
+		<center><b><h2>Post User on Server</h2></b><br>
+		<form action="/users" method="POST" target= "_blank">
+		  <label for="fname">Name*:</label>
+		  <input type="text1" name="userName">
+
+		  <label for="address">Adress:</label>
+		  <input type="text1" name="userLocAddrs"><br><br>
+
+		  <label for="address">Latitude:</label>
+		  <input type="text1" name="userLocLat">
+
+		  <label for="address">Longitude:</label>
+		  <input type="text1" name="userLocLong"><br><br>
+
+		  <button type="submit">Submit</button>
+		</form></center>
+		<br><hr>
+	</div>
+
+</Body>  
+</Html> 
